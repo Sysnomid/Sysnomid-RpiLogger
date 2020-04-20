@@ -10,13 +10,13 @@ app = Flask(__name__)
 
 @app.route('/temp')
 def display_tables():
-	cursor.execute("SELECT * FROM pitemp order by ID desc;")
+	cursor.execute("SELECT * FROM pitemp order by ID desc;")#change the table/collumn values here
 	data = cursor.fetchall()
 	return render_template("index.html", data=data)
 
 @app.route('/temp/wiki')
 def wiki():
-    cursor.execute("SELECT TEMP FROM pitemp ORDER BY ID DESC LIMIT 1;")
+    cursor.execute("SELECT TEMP FROM pitemp ORDER BY ID DESC LIMIT 1;")#change the table/collumn values here
     data0 = cursor.fetchall()
     return render_template("wiki.html", data0=data0[0][0])
 
@@ -30,4 +30,4 @@ def add_hostname_header(response):
 
 
 if __name__ == "__main__": 
-    serve(app, listen='*:8880') 
+    serve(app, listen='*:8880') #change the port values here
