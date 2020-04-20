@@ -6,13 +6,15 @@ This project takes the temperature from my Raspi via python3 and the gpiozero mo
 The code for the Raspberry Pi is stored in a another folder called "pi-side" in the repo.
 
 -Things I want to add
-  Graphs and other interative diagrams
+ 
+ Graphs and other interative diagrams
   More info and datasets to show over time
   Better integraion with Flask-SQLAlchemy
   Better integration with Docker
   
  -Possible Features
-  -A move to Django, or Node.js?
+ 
+ -A move to Django, or Node.js?
   -Move to a NoSQL db?
   
 
