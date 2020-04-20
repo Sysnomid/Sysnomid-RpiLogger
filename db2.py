@@ -1,14 +1,12 @@
 from app import *
 from flask_sqlalchemy import SQLAlchemy
-import mysql.connector
+import psycopg2
+import subprocess
+import os
+proc = subprocess.Popen('sudo heroku config:get DATABASE_URL -a sminfo', stdout=subprocess.PIPE, shell=True)
+db_url = proc.stdout.read().decode('utf-8').strip() + '?sslmode=require'
 
+conn = psycopg2.connect(db_url)
 
-db = mysql.connector.connect (
-	host="localhost",
-	user="root",
-	passwd="Daft&punk4",
-	database="pytemp"
-)
-
-cursor = db.cursor()
+cursor = conn.cursor()
 
