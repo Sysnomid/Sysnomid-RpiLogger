@@ -9,7 +9,7 @@ This project takes the temperature from my Raspi via python3 and the gpiozero mo
   Better integration with Docker
   
  -Possible Features
-  -A move to Django?
+  -A move to Django, or Node.js?
   -Move to a NoSQL db?
   
 
