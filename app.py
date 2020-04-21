@@ -28,6 +28,6 @@ def add_hostname_header(response):
             response.headers["SP-LOCATION"] = hostname
     return response
 
-
+#use waitress wsgi or gunicorn, both pure python!
 if __name__ == "__main__": 
     serve(app, listen='*:8880') #change the port values here
